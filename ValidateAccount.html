@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="account" type="text"><button onclick="checkAccount()";>CheckAccount</button>
+<span id="result"></span>
+<script>
+    function checkAccount() {
+        let regex = /^[_a-z0-9]{6,}$/;
+        let name = document.getElementById('account').value;
+        let result = regex.test(name);
+        if (result) document.getElementById('result').innerHTML = 'The account is valid';
+        else document.getElementById('result').innerHTML = 'The account is not valid';
+    }
+
+</script>
+</body>
+</html>
